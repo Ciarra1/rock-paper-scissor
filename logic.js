@@ -1,5 +1,6 @@
 let computerScore = 0;
 let humanScore = 0;
+let round = 0;
 function getComputerChoice(){
     let randomValue = Math.floor(Math.random()*99);
     if(randomValue <= 33){
@@ -11,20 +12,35 @@ function getComputerChoice(){
     }
 }
 
-function getHumanChoice(){
-    let choice = prompt("Choose between: Rock, Paper, and Scissor");
-    return choice;
-}
+    function getHumanChoice(){
+        let choice;
+        let validChoice = ["rock", "paper", "scissor"];
+        while(true){
+            choice = prompt("enter rock, paper or scissor");
+            choice = choice.toLowerCase();
+            if(!choice){
+                continue;
+            }
+            if (validChoice.includes(choice)){
+                return choice;
+            } else {
+                alert("Invalid choice. Please enter Rock, Paper, or Scissor.");
+            }
+        }
+    }
 
 
 
 function playARound(){
+    console.log("Round: " + round);
     let computerGuess = getComputerChoice();
     let humanGuess = getHumanChoice();
     console.log("Computer Guess: " +computerGuess);
     console.log("Human Guess: " + humanGuess);
     chooseWinner(humanGuess, computerGuess);
     showScores();
+    round++;
+    
 }
 function showScores(){
     console.log("Human: " + humanScore);
@@ -54,6 +70,5 @@ function chooseWinner(humanChoice, computerChoice){
         }
 }
 for(let i = 0; i < 5; i++){
-
     playARound();
 }
