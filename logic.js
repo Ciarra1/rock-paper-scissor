@@ -1,6 +1,6 @@
 let computerScore = 0;
 let humanScore = 0;
-let round = 0;
+let round = 1;
 function getComputerChoice(){
     let randomValue = Math.floor(Math.random()*99);
     if(randomValue <= 33){
@@ -17,10 +17,11 @@ function getComputerChoice(){
         let validChoice = ["rock", "paper", "scissor"];
         while(true){
             choice = prompt("enter rock, paper or scissor");
-            choice = choice.toLowerCase();
+            
             if(!choice){
                 continue;
             }
+            choice = choice.toLowerCase();
             if (validChoice.includes(choice)){
                 return choice;
             } else {
@@ -68,7 +69,4 @@ function chooseWinner(humanChoice, computerChoice){
         } else if (winner === "Tie"){
             console.log("Tie!");
         }
-}
-for(let i = 0; i < 5; i++){
-    playARound();
 }

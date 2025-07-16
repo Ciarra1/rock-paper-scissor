@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+}
+.bg-img {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: contain;
+}
+
+.content {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.rps-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.rps {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 180px;
+  width: 180px;
+  border-radius: 200px;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#rock-btn {
+  background-image: url("resources/rock.png");
+}
+#paper-btn {
+  background-image: url("resources/paper.png");
+}
+
+#scissors-btn {
+  background-image: url("resources/scissors.png");
+}
