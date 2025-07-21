@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="bg-container">
       <img
         class="bg-img"
         src="resources/b434c12446b1ca7bd5e20fdcf0886954.gif"
         alt=""
       />
       <div class="content">
+        <span class="scoreboard-span">
+          <h2 class="score-h2" id="human-score-desc">Human Score:</h2>
+          <h2 class="score-h2" id="computer-score-desc">Computer Score:</h2>
+        </span>
+        <span class="ask-input-span">
+          <h2 class="weapon">Choose your weapon</h2>
+        </span>
         <div class="rps-button-container">
           <button class="rps" id="rock-btn"></button>
           <button class="rps" id="paper-btn"></button>
-          <button class="rps" id="scissors-btn"></button>
+          <button class="rps" id="scissor-btn"></button>
+        </div>
+        <div class="start-game">
+          <button class="start-game-btn">START GAME</button>
         </div>
       </div>
     </div>

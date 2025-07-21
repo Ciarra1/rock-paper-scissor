@@ -4,7 +4,7 @@ body {
   height: 100%;
 }
 
-.container {
+.bg-container {
   min-height: 100%;
   width: 100%;
   position: relative;
@@ -25,11 +25,13 @@ body {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .rps-button-container {
+  margin-top: 70px;
+  min-height: 100%;
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   gap: 4rem;
 }
@@ -47,6 +49,47 @@ body {
   background-repeat: no-repeat;
 }
 
+.scoreboard-span {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-h2 {
+  color: blue;
+  margin: 0;
+}
+
+.start-game {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-game-btn {
+  height: 80px;
+  width: 200px;
+}
+
+.ask-input-span {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ask-input-span h2 {
+  margin: 0;
+}
+
+#human-score-desc {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+#computer-score-desc {
+  margin-top: 10px;
+  margin-left: 15px;
+}
 #rock-btn {
   background-image: url("resources/rock.png");
 }
@@ -54,6 +97,32 @@ body {
   background-image: url("resources/paper.png");
 }
 
-#scissors-btn {
+#scissor-btn {
   background-image: url("resources/scissors.png");
+}
+
+.rps:focus {
+  outline: 2px solid red;
+}
+
+.weapon {
+  font-size: 50px;
+}
+
+.result-div {
+  padding-top: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.computer-pick {
+  margin: 0;
+  font-size: 50px;
+}
+.winner-declaration {
+  margin: 0;
+  padding-top: 25px;
+  font-size: 50px;
 }
